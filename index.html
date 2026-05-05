@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Million Car — вышивка машины по фото</title>
+  <meta name="description" content="Кастомная машинная вышивка автомобиля по фото на худи, свитшотах и футболках. Бесплатный макет, изготовление 3–5 дней, доставка по России и за границу.">
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --card: #151518;
+      --card2: #1d1d22;
+      --text: #f5f3ef;
+      --muted: #b9b5ad;
+      --line: rgba(255,255,255,.12);
+      --accent: #f2c14e;
+      --accent2: #ffffff;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(242,193,78,.16), transparent 34rem),
+        radial-gradient(circle at 90% 20%, rgba(255,255,255,.07), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .page {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 18px 16px 46px;
+    }
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: .04em;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 18px rgba(242,193,78,.8);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 13vw, 76px);
+      line-height: .88;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 620px;
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 80px rgba(0,0,0,.55);
+      background: var(--card);
+      aspect-ratio: 4 / 5;
+    }
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .btns {
+      display: grid;
+      gap: 12px;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 58px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      font-weight: 800;
+      letter-spacing: .01em;
+      text-align: center;
+      border: 1px solid var(--line);
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .btn:active { transform: scale(.98); opacity: .88; }
+    .primary {
+      background: var(--accent2);
+      color: #0b0b0d;
+    }
+    .secondary {
+      background: rgba(255,255,255,.07);
+      color: var(--text);
+    }
+    section {
+      margin-top: 26px;
+      padding: 24px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.055);
+      backdrop-filter: blur(14px);
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      letter-spacing: -.04em;
+    }
+    p { color: var(--muted); line-height: 1.55; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1.18;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--card2);
+    }
+    .steps, .features {
+      display: grid;
+      gap: 10px;
+    }
+    .item {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(0,0,0,.24);
+      border: 1px solid var(--line);
+    }
+    .item b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+    .item span {
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .note {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(242,193,78,.11);
+      border: 1px solid rgba(242,193,78,.32);
+      color: #fff4cf;
+      line-height: 1.5;
+    }
+    .footer {
+      margin-top: 26px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+    @media (min-width: 680px) {
+      .hero { min-height: auto; padding-top: 34px; }
+      .hero-img { aspect-ratio: 16 / 10; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .btns { grid-template-columns: 1fr 1fr; }
+      .primary { grid-column: 1 / -1; }
+      section { padding: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="logo"><span class="dot"></span> MILLION CAR EMBROIDERY</div>
+      <h1>Твоя машина<br>на худи</h1>
+      <p class="lead">Кастомная машинная вышивка автомобиля по фото. Отрисовываем дизайн вручную, сохраняем характер машины и превращаем его в вещь, которую хочется носить.</p>
+      <div class="hero-img">
+        <img src="assets/work_01.jpg" alt="Кастомная вышивка машины на худи">
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="https://t.me/vishivka_pofoto">Получить бесплатный макет</a>
+        <a class="btn secondary" href="#works">Посмотреть работы</a>
+        <a class="btn secondary" href="https://t.me/millioncaremb">Telegram-канал</a>
+      </div>
+    </header>
+
+    <section id="works">
+      <h2>Примеры работ</h2>
+      <p>Делаем вышивку под конкретную машину: цвет, ракурс, диски, фары, текст, логотипы и стиль — всё подбирается индивидуально.</p>
+      <div class="grid">
+        <img src="assets/work_01.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_02.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_03.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_04.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_05.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_06.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_07.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_08.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_09.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_10.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_11.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_12.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+<img src="assets/work_13.jpg" alt="Пример автомобильной вышивки Million Car" loading="lazy">
+      </div>
+    </section>
+
+    <section>
+      <h2>Как заказать</h2>
+      <div class="steps">
+        <div class="item"><b>1. Отправляешь фото машины</b><span>Можно прислать несколько ракурсов — подскажем, какой лучше подойдёт для вышивки.</span></div>
+        <div class="item"><b>2. Делаем макет</b><span>Создаём индивидуальный дизайн под твоё авто и будущую вещь.</span></div>
+        <div class="item"><b>3. Согласовываем детали</b><span>Цвет изделия, размер вышивки, текст, логотипы и расположение.</span></div>
+        <div class="item"><b>4. Вышиваем и отправляем</b><span>Изготовление обычно занимает 3–5 дней.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Почему это не просто принт</h2>
+      <div class="features">
+        <div class="item"><b>Объёмная фактура нитей</b><span>Вышивка выглядит дороже и живее, чем обычная печать.</span></div>
+        <div class="item"><b>Дизайн с нуля</b><span>Мы не загружаем фото напрямую в машинку — каждый дизайн адаптируется вручную.</span></div>
+        <div class="item"><b>Для подарка или себе</b><span>Идеально для тех, кто правда любит свою машину.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Сроки и доставка</h2>
+      <p class="note">Обычно изготовление занимает <b>3–5 дней</b>. Если нужно срочнее — напишите, постараемся сделать быстрее.</p>
+      <p>Отправляем по всей России и за границу. Доставка на выбор клиента: СДЭК, Почта России, Ozon, Яндекс, 5Post и другие транспортные службы.</p>
+    </section>
+
+    <section>
+      <h2>Хочешь такую же?</h2>
+      <p>Напиши нам в Telegram, пришли фото машины и получи бесплатный макет будущей вышивки.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://t.me/vishivka_pofoto">Написать и получить макет</a>
+        <a class="btn secondary" href="https://www.instagram.com/_million.car_?igsh=bDNnaWJiNTc4bDVn&utm_source=qr">Instagram</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      Million Car · кастомная вышивка автомобилей по фото
+    </div>
+  </main>
+</body>
+</html>
